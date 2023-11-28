@@ -36,44 +36,44 @@
         <div class="input-group-prepend">
           <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Nombre</span>
         </div>
-        <input type="text" id ="companyName" class="form-control" placeholder="Opcional" value="">
+        <input type="text" id ="companyName" class="form-control" placeholder="Opcional" name="personalInformation">
       </div>
       <div class="input-group mb-2" style="padding-bottom: 10px;">
         <div class="input-group-prepend d-flex">
           <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">* Empresa</span>
         </div>
-        <input type="text" id ="staffName" class="form-control" required placeholder="Obligatorio" value="">
+        <input type="text" id ="staffName" class="form-control" required placeholder="Obligatorio" name="personalInformation">
       </div>
       <div class="input-group mb-2" style="padding-bottom: 10px;">
         <div class="input-group-prepend">
           <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Correo</span>
         </div>
-        <input type="text" id ="email" class="form-control" placeholder="Opcional" value="">
+        <input type="text" id ="email" class="form-control" placeholder="Opcional" name="personalInformation">
       </div>
       <div class="input-group mb-2">
         <div class="input-group-prepend">
           <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Teléfono</span>
         </div>
-        <input type="text" id ="phone" class="form-control" placeholder="Opcional" value="">
+        <input type="text" id ="phone" class="form-control" placeholder="Opcional" name="personalInformation">
       </div>
     </div>
     <div id="questionsInGrid">
       <div class="q1">
         <h5>1.- Represento/trabajo:</h5>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="q1" value="agenteIndependiente" id="agenteIndependiente">
+          <input class="form-check-input" type="radio" name="q1" value="agenteIndependiente" id="q1o1">
           <label class="form-check-label">
             Agente independiente
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="q1" value="agenteEnAgenciaInmboliaria" id="agenteEnAgenciaInmboliaria">
+          <input class="form-check-input" type="radio" name="q1" value="agenteEnAgenciaInmboliaria" id="q1o2">
           <label class="form-check-label">
             Agente en agencia inmobiliaria
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="q1" value="desarrolloInmobiliario" id="desarrolloInmobiliario">
+          <input class="form-check-input" type="radio" name="q1" value="desarrolloInmobiliario" id="q1o3">
           <label class="form-check-label">
             Desarrollo inmobiliario
           </label>
@@ -85,55 +85,15 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
-              <th>0</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="0trim3q2" id="0trim3q2"></td>
-            </tr>
-            <tr>
-              <th>1 a 5</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="1a5trim3q2" id="1a5trim3q2"></td>
-            </tr>
-            <tr>
-              <th>6 a 10</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="6a10trim3q2" id="6a10trim3q2"></td>
-            </tr>
-            <tr>
-              <th>11 a 15</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="11a15trim3q2" id="11a15trim3q2"></td>
-            </tr>
-            <tr>
-              <th>16 a 20</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="16a20trim3q2" id="16a20trim3q2"></td>
-            </tr>
-            <tr>
-              <th>21 a 25</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="21a25trim3q2" id="21a25trim3q2"></td>
-            </tr>
-            <tr>
-              <th>26 a 30</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="26a30trim3q2" id="26a30trim3q2"></td>
-            </tr>
-            <tr>
-              <th>31 a 35</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="31a35trim3q2" id="31a35trim3q2"></td>
-            </tr>
-            <tr>
-              <th>36 a 40</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="36a40trim3q2" id="36a40trim3q2"></td>
-            </tr>
-            <tr>
-              <th>41 a 45</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="41a45trim3q2" id="41a45trim3q2"></td>
-            </tr>
-            <tr>
-              <th>46+</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="46+trim3q2" id="46+trim3q2"></td>
+              <th>Escribe la cantidad en el recuadro siguiente</th>
+              <td><input type="number" id="q2o1" name="q2"></td>
             </tr>
             <tr>
               <th>No vendo condominios</th>
-              <td id="trim3"><input type="radio" name="trim3q2" value="novendocondominiostrim3q2" id="novendocondominiostrim3q2"></td>
+              <td><input type="checkbox" value="novendocondominios" name="q2" id="q2o2" onclick="disableInputNumberQuestion2(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -144,55 +104,15 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
-              <th>0</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="0trim3q3" id="0trim3q3"></td>
-            </tr>
-            <tr>
-              <th>1 a 5</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="1a5trim3q3" id="1a5trim3q3"></td>
-            </tr>
-            <tr>
-              <th>6 a 10</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="6a10trim3q3" id="6a10trim3q3"></td>
-            </tr>
-            <tr>
-              <th>11 a 15</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="11a15trim3q3" id="11a15trim3q3"></td>
-            </tr>
-            <tr>
-              <th>16 a 20</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="16a20trim3q3" id="16a20trim3q3"></td>
-            </tr>
-            <tr>
-              <th>21 a 25</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="21a25trim3q3" id="21a25trim3q3"></td>
-            </tr>
-            <tr>
-              <th>26 a 30</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="26a30trim3q3" id="26a30trim3q3"></td>
-            </tr>
-            <tr>
-              <th>31 a 35</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="31a35trim3q3" id="31a35trim3q3"></td>
-            </tr>
-            <tr>
-              <th>36 a 40</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="36a40trim3q3" id="36a40trim3q3"></td>
-            </tr>
-            <tr>
-              <th>41 a 45</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="41a45trim3q3" id="41a45trim3q3"></td>
-            </tr>
-            <tr>
-              <th>46+</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="46+trim3q3" id="46+trim3q3"></td>
+              <th>Escribe la cantidad en el recuadro siguiente</th>
+              <td><input type="number" id="q3o1" name="q3"></td>
             </tr>
             <tr>
               <th>No vendo casas</th>
-              <td id="trim3"><input type="radio" name="trim3q3" value="novendocasastrim3q3" id="novendocasastrim3q3"></td>
+              <td><input type="checkbox" value="novendocasas" id="q3o2" name="q3" onclick="disableInputNumberQuestion3(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -203,55 +123,15 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
-              <th>0</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="0trim3q4" id="0trim3q4"></td>
-            </tr>
-            <tr>
-              <th>1 a 5</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="1a5trim3q4" id="1a5trim3q4"></td>
-            </tr>
-            <tr>
-              <th>6 a 10</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="6a10trim3q4" id="6a10trim3q4"></td>
-            </tr>
-            <tr>
-              <th>11 a 15</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="11a15trim3q4" id="11a15trim3q4"></td>
-            </tr>
-            <tr>
-              <th>16 a 20</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="16a20trim3q4" id="16a20trim3q4"></td>
-            </tr>
-            <tr>
-              <th>21 a 25</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="21a25trim3q4" id="21a25trim3q4"></td>
-            </tr>
-            <tr>
-              <th>26 a 30</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="26a30trim3q4" id="26a30trim3q4"></td>
-            </tr>
-            <tr>
-              <th>31 a 35</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="31a35trim3q4" id="31a35trim3q4"></td>
-            </tr>
-            <tr>
-              <th>36 a 40</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="36a40trim3q4" id="36a40trim3q4"></td>
-            </tr>
-            <tr>
-              <th>41 a 45</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="41a45trim3q4" id="41a45trim3q4"></td>
-            </tr>
-            <tr>
-              <th>46+</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="46+trim3q4" id="46+trim3q4"></td>
+              <th>Escribe la cantidad en el recuadro siguiente</th>
+              <td><input type="number" id="q4o1" name="q4"></td>
             </tr>
             <tr>
               <th>No vendo lotes</th>
-              <td id="trim3"><input type="radio" name="trim3q4" value="novendolotestrim3q4" id="novendolotestrim3q4"></td>
+              <td><input type="checkbox" value="novendolotes" id="q4o2" name="q4" onclick="disableInputNumberQuestion4(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -262,47 +142,47 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>$100K a $150K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="100Ka150Ktrim3q5" id="100Ka150Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="100Ka150K" id="q5o1"></td>
             </tr>
             <tr>
               <th>$151K a $200K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="151Ka200Ktrim3q5" id="151Ka200Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="151Ka200K" id="q5o2"></td>
             </tr>
             <tr>
               <th>$201K a $250K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="201Ka250Ktrim3q5" id="201Ka250Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="201Ka250K" id="q5o3"></td>
             </tr>
             <tr>
               <th>$251K a $300K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="251Ka300Ktrim3q5" id="251Ka300Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="251Ka300K" id="q5o4"></td>
             </tr>
             <tr>
               <th>$301K a $350K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="301Ka350Ktrim3q5" id="301Ka350Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="301Ka350K" id="q5o5"></td>
             </tr>
             <tr>
               <th>$351K a $400K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="351Ka400Ktrim3q5" id="351Ka400Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="351Ka400K" id="q5o6"></td>
             </tr>
             <tr>
               <th>$401K a $450K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="401Ka450Ktrim3q5" id="401Ka450Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="401Ka450K" id="q5o7"></td>
             </tr>
             <tr>
               <th>$451K a $500K</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="451Ka500Ktrim3q5" id="451Ka500Ktrim3q5"></td>
+              <td><input type="radio" name="q5" value="451Ka500K" id="q5o8"></td>
             </tr>
             <tr>
               <th>$501K+</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="501K+trim3q5" id="501K+trim3q5"></td>
+              <td><input type="radio" name="q5" value="501K+" id="q5o9"></td>
             </tr>
             <tr>
               <th>Ninguno, no vendo condominios</th>
-              <td id="trim3"><input type="radio" name="trim3q5" value="ningunonovendocondominiostrim3q5" id="ningunonovendocondominiostrim3q5"></td>
+              <td><input type="radio" name="q5" value="ningunonovendocondominios" id="q5o10"></td>
             </tr>
           </tbody>
         </table>
@@ -313,47 +193,47 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>$100K a $150K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="100Ka150Ktrim3q6" id="100Ka150Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="100Ka150K" id="q6o1"></td>
             </tr>
             <tr>
               <th>$151K a $200K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="151Ka200Ktrim3q6" id="151Ka200Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="151Ka200K" id="q6o2"></td>
             </tr>
             <tr>
               <th>$201K a $250K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="201Ka250Ktrim3q6" id="201Ka250Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="201Ka250K" id="q6o3"></td>
             </tr>
             <tr>
               <th>$251K a $300K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="251Ka300Ktrim3q6" id="251Ka300Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="251Ka300K" id="q6o4"></td>
             </tr>
             <tr>
               <th>$301K a $350K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="301Ka350Ktrim3q6" id="301Ka350Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="301Ka350K" id="q6o5"></td>
             </tr>
             <tr>
               <th>$351K a $400K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="351Ka400Ktrim3q6" id="351Ka400Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="351Ka400K" id="q6o6"></td>
             </tr>
             <tr>
               <th>$401K a $450K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="401Ka450Ktrim3q6" id="401Ka450Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="401Ka450K" id="q6o7"></td>
             </tr>
             <tr>
               <th>$451K a $500K</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="451Ka500Ktrim3q6" id="451Ka500Ktrim3q6"></td>
+              <td><input type="radio" name="q6" value="451Ka500K" id="q6o8"></td>
             </tr>
             <tr>
               <th>$501K+</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="501K+trim3q6" id="501K+trim3q6"></td>
+              <td><input type="radio" name="q6" value="501K+" id="q6o9"></td>
             </tr>
             <tr>
               <th>Ninguno, no vendo casas</th>
-              <td id="trim3"><input type="radio" name="trim3q6" value="ningunonovendocasastrim3q6" id="ningunonovendocasastrim3q6"></td>
+              <td><input type="radio" name="q6" value="ningunonovendocasas" id="q6o10"></td>
             </tr>
           </tbody>
         </table>
@@ -364,51 +244,51 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>$20K a $100K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="20Ka100Ktrim3q7" id="20Ka100Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="20Ka100K" id="q7o1"></td>
             </tr>
             <tr>
               <th>$101K a $150K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="101Ka150Ktrim3q7" id="101Ka150Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="101Ka150K" id="q7o2"></td>
             </tr>
             <tr>
               <th>$151K a $200K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="151Ka200Ktrim3q7" id="151Ka200Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="151Ka200K" id="q7o3"></td>
             </tr>
             <tr>
               <th>$201K a $250K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="201Ka250Ktrim3q7" id="201Ka250Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="201Ka250K" id="q7o4"></td>
             </tr>
             <tr>
               <th>$251K a $300K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="251Ka300Ktrim3q7" id="251Ka300Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="251Ka300K" id="q7o5"></td>
             </tr>
             <tr>
               <th>$301K a $350K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="301Ka350Ktrim3q7" id="301Ka350Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="301Ka350K" id="q7o6"></td>
             </tr>
             <tr>
               <th>$351K a $400K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="351Ka400Ktrim3q7" id="351Ka400Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="351Ka400K" id="q7o7"></td>
             </tr>
             <tr>
               <th>$401K a $450K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="401Ka450Ktrim3q7" id="401Ka450Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="401Ka450K" id="q7o8"></td>
             </tr>
             <tr>
               <th>$451K a $500K</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="451Ka500Ktrim3q7" id="451Ka500Ktrim3q7"></td>
+              <td><input type="radio" name="q7" value="451Ka500K" id="q7o9"></td>
             </tr>
             <tr>
               <th>$501K+</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="501K+trim3q7" id="501K+trim3q7"></td>
+              <td><input type="radio" name="q7" value="501K+" id="q7o10"></td>
             </tr>
             <tr>
               <th>Ninguno, no vendo lotes</th>
-              <td id="trim3"><input type="radio" name="trim3q7" value="ningunonovendolotestrim3q7" id="ningunonovendolotestrim3q7"></td>
+              <td><input type="radio" name="q7" value="ningunonovendolotes" id="q7o11"></td>
             </tr>
           </tbody>
         </table>
@@ -419,51 +299,51 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>0%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="0%trim3q8" id="0%trim3q8"></td>
+              <td><input type="radio" name="q8" value="0%" id="q8o1"></td>
             </tr>
             <tr>
               <th>1% - 10%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="1%-10%trim3q8" id="1%-10%trim3q8"></td>
+              <td><input type="radio" name="q8" value="1%-10%" id="q8o2"></td>
             </tr>
             <tr>
               <th>11% - 20%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="11%-20%trim3q8" id="11%-20%trim3q8"></td>
+              <td><input type="radio" name="q8" value="11%-20%" id="q8o3"></td>
             </tr>
             <tr>
               <th>21% - 30%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="21%-30%trim3q8" id="21%-30%trim3q8"></td>
+              <td><input type="radio" name="q8" value="21%-30%" id="q8o4"></td>
             </tr>
             <tr>
               <th>31% - 40%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="31%-40%trim3q8" id="31%-40%trim3q8"></td>
+              <td><input type="radio" name="q8" value="31%-40%" id="q8o5"></td>
             </tr>
             <tr>
               <th>41% - 50%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="41%-50%trim3q8" id="41%-50%trim3q8"></td>
+              <td><input type="radio" name="q8" value="41%-50%" id="q8o6"></td>
             </tr>
             <tr>
               <th>51% - 60%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="51%-60%trim3q8" id="51%-60%trim3q8"></td>
+              <td><input type="radio" name="q8" value="51%-60%" id="q8o7"></td>
             </tr>
             <tr>
               <th>61% - 70%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="61%-70%trim3q8" id="61%-70%trim3q8"></td>
+              <td><input type="radio" name="q8" value="61%-70%" id="q8o8"></td>
             </tr>
             <tr>
               <th>71% - 80%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="71%-80%trim3q8" id="71%-80%trim3q8"></td>
+              <td><input type="radio" name="q8" value="71%-80%" id="q8o9"></td>
             </tr>
             <tr>
               <th>81% - 90%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="81%-90%trim3q8" id="81%-90%trim3q8"></td>
+              <td><input type="radio" name="q8" value="81%-90%" id="q8o10"></td>
             </tr>
             <tr>
               <th>91% - 100%</th>
-              <td id="trim3"><input type="radio" name="trim3q8" value="91%-100%trim3q8" id="91%-100%trim3q8"></td>
+              <td><input type="radio" name="q8" value="91%-100%" id="q8o11"></td>
             </tr>
           </tbody>
         </table>
@@ -474,23 +354,23 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>Contado</th>
-              <td id="trim3"><input type="radio" name="trim3q9" value="contadotrim3q9" id="contadotrim3q9"></td>
+              <td><input type="radio" name="q9" value="contado" id="q9o1"></td>
             </tr>
             <tr>
               <th>Crédito bancario</th>
-              <td id="trim3"><input type="radio" name="trim3q9" value="creditobancariotrim3q9" id="creditobancariotrim3q9"></td>
+              <td><input type="radio" name="q9" value="creditobancario" id="q9o2"></td>
             </tr>
             <tr>
               <th>Financiamiento directo por el vendedor</th>
-              <td id="trim3"><input type="radio" name="trim3q9" value="financiamientodirectoporelvendedortrim3q9" id="financiamientodirectoporelvendedortrim3q9"></td>
+              <td><input type="radio" name="q9" value="financiamientodirectoporelvendedor" id="q9o3"></td>
             </tr>
             <tr>
               <th>No tuve ventas</th>
-              <td id="trim3"><input type="radio" name="trim3q9" value="notuveventastrim3q9" id="notuveventastrim3q9"></td>
+              <td><input type="radio" name="q9" value="notuveventas" id="q9o4"></td>
             </tr>
           </tbody>
         </table>
@@ -501,35 +381,35 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>     
+              <th>Trimestre 3</th>     
             </tr>
             <tr>
               <th>25 a 35 años</th>
-              <td id="trim3"><input type="radio" name="trim3q10" value="25a35trim3q10" id="25a35trim3q10"></td>
+              <td><input type="radio" name="q10" value="25a35" id="q10o1"></td>
             </tr>
             <tr>
               <th>36 a 45 años</th>
-              <td id="trim3"><input type="radio" name="trim3q10" value="36a45trim3q10" id="36a45trim3q10"></td>
+              <td><input type="radio" name="q10" value="36a45" id="q10o2"></td>
             </tr>
             <tr>
               <th>46 a 55 años</th>
-              <td id="trim3"><input type="radio" name="trim3q10" value="46a55trim3q10" id="46a55trim3q10"></td>
+              <td><input type="radio" name="q10" value="46a55" id="q10o3"></td>
             </tr>
             <tr>
               <th>56 a 65 años</th>
-              <td id="trim3"><input type="radio" name="trim3q10" value="56a65trim3q10" id="56a65trim3q10"></td>
+              <td><input type="radio" name="q10" value="56a65" id="q10o4"></td>
             </tr>
             <tr>
               <th>66 a 75 años</th>
-              <td id="trim3"><input type="radio" name="trim3q10" value="66a75trim3q10" id="66a75trim3q10"></td>
+              <td><input type="radio" name="q10" value="66a75" id="q10o5"></td>
             </tr>
             <tr>
               <th>76 años +</th>
-              <td id="trim3"><input type="radio" name="trim3q10" value="76+trim3q10" id="76+trim3q10"></td>
+              <td><input type="radio" name="q10" value="76+" id="q10o6"></td>
             </tr>
             <tr>
               <th>No tuve ventas</th>
-              <td id="trim3"><input type="radio" name="trim3q10" value="notuveventastrim3q10" id="notuveventastrim3q10"></td>
+              <td><input type="radio" name="q10" value="notuveventas" id="q10o7"></td>
             </tr>
           </tbody>
         </table>
@@ -540,37 +420,27 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>California (USA)</th>
-              <td id="trim3"><input type="radio" name="trim3q11" value="californiaUsatrim3q11" id="californiaUsatrim3q11"></td>
+              <td><input type="checkbox" name="q11" value="californiaUsa" id="q11o1"></td>
             </tr>
             <tr>
               <th>Tijuana</th>
-              <td id="trim3"><input type="radio" name="trim3q11" value="tijuanatrim3q11" id="tijuanatrim3q11"></td>
+              <td><input type="checkbox" name="q11" value="tijuana" id="q11o2"></td>
             </tr>
             <tr>
               <th>Mexicali</th>
-              <td id="trim3"><input type="radio" name="trim3q11" value="mexicalitrim3q11" id="mexicalitrim3q11"></td>
+              <td><input type="checkbox" name="q11" value="mexicali" id="q11o3"></td>
             </tr>
             <tr>
-              <th>Tijuana/California</th>
-              <td id="trim3"><input type="radio" name="trim3q11" value="tijuanacaliforniatrim3q11" id="tijuanacaliforniatrim3q11"></td>
-            </tr>
-            <tr>
-              <th>Del centro del país</th>
-              <td id="trim3"><input type="radio" name="trim3q11" value="centrodelpaistrim3q11" id="centrodelpaistrim3q11"></td>
-            </tr>
-            <tr>
-              <th>Otros</th>
-              <td id="trim3"><input type="radio" name="trim3q11" id="otrostrim3q11" onchange="escribirCiudad(this)">
-                <div id="insertCitytrim3q11"></div>
-              </td>
+              <th>Otros, escribe el nombre de la ciudad o ciudades</th>
+              <td><input type="text" name="q11" id="q11o4"></td>
             </tr>
             <tr>
               <th>No tuve ventas</th>
-              <td id="trim3"><input type="radio" name="trim3q11" value="notuveventastrim3q11" id="notuveventastrim3q11"></td>
+              <td><input type="checkbox" name="q11" value="notuveventas" id="q11o5" onchange="disableOptionsQ11(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -581,51 +451,15 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
-              <th>0</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="0trim3q12" id="0trim3q12"></td>
-            </tr>
-            <tr>
-              <th>1 a 5</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="1a5trim3q12" id="1a5trim3q12"></td>
-            </tr>
-            <tr>
-              <th>6 a 10</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="6a10trim3q12" id="6a10trim3q12"></td>
-            </tr>
-            <tr>
-              <th>11 a 15</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="11a15trim3q12" id="11a15trim3q12"></td>
-            </tr>
-            <tr>
-              <th>16 a 30</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="16a30trim3q12" id="16a30trim3q12"></td>
-            </tr>
-            <tr>
-              <th>31 a 50</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="31a50trim3q12" id="31a50trim3q12"></td>
-            </tr>
-            <tr>
-              <th>51 a 70</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="51a70trim3q12" id="51a70trim3q12"></td>
-            </tr>
-            <tr>
-              <th>71 a 100</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="71a100trim3q12" id="71a100trim3q12"></td>
-            </tr>
-            <tr>
-              <th>101 a 150</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="101a150trim3q12" id="101a150trim3q12"></td>
-            </tr>
-            <tr>
-              <th>151 a 200</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="151a200trim3q12" id="151a200trim3q12"></td>
+              <th>Escribe la cantidad en el recuadro siguiente</th>
+              <td><input type="number" name="q12" id="q12o1"></td>
             </tr>
             <tr>
               <th>No vendo casas</th>
-              <td id="trim3"><input type="radio" name="trim3q12" value="novendocasastrim3q12" id="novendocasastrim3q12"></td>
+              <td><input type="checkbox" name="q12" value="novendocasas" id="q12o2" onclick="disableInputNumberQuestion12(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -636,51 +470,15 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
-              <th>0</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="0trim3q13" id="0trim3q13"></td>
-            </tr>
-            <tr>
-              <th>1 a 5</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="1a5trim3q13" id="1a5trim3q13"></td>
-            </tr>
-            <tr>
-              <th>6 a 10</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="6a10trim3q13" id="6a10trim3q13"></td>
-            </tr>
-            <tr>
-              <th>11 a 15</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="11a15trim3q13" id="11a15trim3q13"></td>
-            </tr>
-            <tr>
-              <th>16 a 30</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="16a30trim3q13" id="16a30trim3q13"></td>
-            </tr>
-            <tr>
-              <th>31 a 50</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="31a50trim3q13" id="31a50trim3q13"></td>
-            </tr>
-            <tr>
-              <th>51 a 70</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="51a70trim3q13" id="51a70trim3q13"></td>
-            </tr>
-            <tr>
-              <th>71 a 100</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="71a100trim3q13" id="71a100trim3q13"></td>
-            </tr>
-            <tr>
-              <th>101 a 150</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="101a150trim3q13" id="101a150trim3q13"></td>
-            </tr>
-            <tr>
-              <th>151 a 200</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="151a200trim3q13" id="151a200trim3q13"></td>
+              <th>Escribe la cantidad en el recuadro siguiente</th>
+              <td><input type="number" name="q13" id="q13o1"></td>
             </tr>
             <tr>
               <th>No vendo condominios</th>
-              <td id="trim3"><input type="radio" name="trim3q13" value="novendocondominiostrim3q13" id="novendocondominiostrim3q13"></td>
+              <td><input type="checkbox" name="q13" value="novendocondominios" id="q13o2" onclick="disableInputNumberQuestion13(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -691,51 +489,15 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
-              <th>0</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="0trim3q14" id="0trim3q14"></td>
-            </tr>
-            <tr>
-              <th>1 a 5</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="1a5trim3q14" id="1a5trim3q14"></td>
-            </tr>
-            <tr>
-              <th>6 a 10</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="6a10trim3q14" id="6a10trim3q14"></td>
-            </tr>
-            <tr>
-              <th>11 a 15</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="11a15trim3q14" id="11a15trim3q14"></td>
-            </tr>
-            <tr>
-              <th>16 a 30</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="16a30trim3q14" id="16a30trim3q14"></td>
-            </tr>
-            <tr>
-              <th>31 a 50</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="31a50trim3q14" id="31a50trim3q14"></td>
-            </tr>
-            <tr>
-              <th>51 a 70</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="51a70trim3q14" id="51a70trim3q14"></td>
-            </tr>
-            <tr>
-              <th>71 a 100</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="71a100trim3q14" id="71a100trim3q14"></td>
-            </tr>
-            <tr>
-              <th>101 a 150</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="101a150trim3q14" id="101a150trim3q14"></td>
-            </tr>
-            <tr>
-              <th>151 a 200</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="151a200trim3q14" id="151a200trim3q14"></td>
+              <th>Escribe la cantidad en el recuadro siguiente</th>
+              <td><input type="number" name="q14" id="q14o1"></td>
             </tr>
             <tr>
               <th>No vendo lotes</th>
-              <td id="trim3"><input type="radio" name="trim3q14" value="novendolotestrim3q14" id="novendolotestrim3q14"></td>
+              <td><input type="checkbox" name="q14" value="novendolotes" id="q14o2" onclick="disableInputNumberQuestion14(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -746,33 +508,29 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>Compran para vivir</th>
-              <td id="trim3"><input type="radio" name="trim3q15" value="compranparavivirtrim3q15" id="compranparavivirtrim3q15"></td>
+              <td><input type="radio" name="q15" value="compranparavivir" id="q15o1" onclick="escribirUso(this)"></td>
             </tr>
             <tr>
               <th>Compran para rentar</th>
-              <td id="trim3"><input type="radio" name="trim3q15" value="compranpararentartrim3q15" id="compranpararentartrim3q15"></td>
+              <td><input type="radio" name="q15" value="compranpararentar" id="q15o2" onclick="escribirUso(this)"></td>
             </tr>
             <tr>
               <th>Compran como second home</th>
-              <td id="trim3"><input type="radio" name="trim3q15" value="comprancomosecondhometrim3q15" id="comprancomosecondhometrim3q15"></td>
-            </tr>
-            <tr>
-              <th>Rentan/Second home</th>
-              <td id="trim3"><input type="radio" name="trim3q15" value="rentan/secondhometrim3q15" id="rentan/secondhometrim3q15"></td>
+              <td><input type="radio" name="q15" value="comprancomosecondhome" id="q15o3" onclick="escribirUso(this)"></td>
             </tr>
             <tr>
               <th>Otros</th>
-              <td id="trim3"><input type="radio" name="trim3q15" id="otrostrim3q15" onchange="escribirUso(this)">
-                <div id="insertUsetrim3q15"></div>
+              <td><input type="radio" name="q15" id="q15o4" onclick="escribirUso(this)">
+                <div id="insertUse"></div>
               </td>
             </tr>
             <tr>
               <th>No tuve ventas</th>
-              <td id="trim3"><input type="radio" name="trim3q15" value="notuveventastrim3q15" id="notuveventastrim3q15"></td>
+              <td><input type="checkbox" name="q15" value="notuveventas" id="q15o5" onclick="disableOptionQ15(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -783,27 +541,27 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
               <th>Internet y redes sociales</th>
-              <td id="trim3"><input type="radio" name="trim3q16" value="internetyredessocialestrim3q16" id="internetyredessocialestrim3q16"></td>
+              <td><input type="radio" name="q16" value="internetyredessociales" id="q16o1"></td>
             </tr>
             <tr>
               <th>Referidos</th>
-              <td id="trim3"><input type="radio" name="trim3q16" value="referidostrim3q16" id="referidostrim3q16"></td>
+              <td><input type="radio" name="q16" value="referidos" id="q16o2"></td>
             </tr>
             <tr>
               <th>Llamada</th>
-              <td id="trim3"><input type="radio" name="trim3q16" value="llamadatrim3q16" id="llamadatrim3q16"></td>
+              <td><input type="radio" name="q16" value="llamada" id="q16o3"></td>
             </tr>
             <tr>
               <th>Terrestre (walk-in)</th>
-              <td id="trim3"><input type="radio" name="trim3q16" value="terrestrewalkintrim3q16" id="terrestrewalkintrim3q16"></td>
+              <td><input type="radio" name="q16" value="terrestrewalkin" id="q16o4"></td>
             </tr>
             <tr>
               <th>No tuve ventas</th>
-              <td id="trim3"><input type="radio" name="trim3q16" value="notuveventastrim3q16" id="notuveventastrim3q16"></td>
+              <td><input type="radio" name="q16" value="notuveventas" id="q16o5"></td>
             </tr>
           </tbody>
         </table>
@@ -814,35 +572,11 @@
           <tbody>
             <tr>
               <td></td>
-              <th id="trim3">Trimestre 3</th>
+              <th>Trimestre 3</th>
             </tr>
             <tr>
-              <th>0</th>
-              <td id="trim3"><input type="radio" name="trim3q17" value="0trim3q17" id="0trim3q17"></td>
-            </tr>
-            <tr>
-              <th>1 a 6</th>
-              <td id="trim3"><input type="radio" name="trim3q17" value="1a6trim3q17" id="1a6trim3q17"></td>
-            </tr>
-            <tr>
-              <th>7 a 12</th>
-              <td id="trim3"><input type="radio" name="trim3q17" value="7a12trim3q17" id="7a12trim3q17"></td>
-            </tr>
-            <tr>
-              <th>13 a 18</th>
-              <td id="trim3"><input type="radio" name="trim3q17" value="13a18trim3q17" id="13a18trim3q17"></td>
-            </tr>
-            <tr>
-              <th>19 a 24</th>
-              <td id="trim3"><input type="radio" name="trim3q17" value="19a24trim3q17" id="19a24trim3q17"></td>
-            </tr>
-            <tr>
-              <th>25 a 30</th>
-              <td id="trim3"><input type="radio" name="trim3q17" value="25a30trim3q17" id="25a30trim3q17"></td>
-            </tr>
-            <tr>
-              <th>31+</th>
-              <td id="trim3"><input type="radio" name="trim3q17" value="31+trim3q17" id="31+trim3q17"></td>
+              <th>Escribe la cantidad en el recuadro siguiente</th>
+              <td><input type="number" name="q17" value="" id="q17o1"></td>
             </tr>
           </tbody>
         </table>
