@@ -19,6 +19,7 @@
 // let q16
 // let q17
 var q11 = []
+var q15 = [] 
 var responses = []
 // function getResponses(){
 //   getValuesQ1()
@@ -591,7 +592,7 @@ function disableInputNumberQuestion14(option){
 //   }
 //   console.log("Q14: ",q14)
 // }
-function disableOptionQ15(option){
+function disableOptionsQ15(option){
   if(option.checked == true){
     document.getElementById("q15o1").disabled = true
     document.getElementById("q15o1").checked = false
@@ -599,9 +600,8 @@ function disableOptionQ15(option){
     document.getElementById("q15o2").checked = false
     document.getElementById("q15o3").disabled = true
     document.getElementById("q15o3").checked = false
+    document.getElementById("q15o4").value = ""
     document.getElementById("q15o4").disabled = true
-    document.getElementById("q15o4").checked = false
-    document.getElementById("h6Uso").innerHTML = ""
   }
   else if(option.checked == false){
     document.getElementById("q15o1").disabled = false
@@ -610,33 +610,33 @@ function disableOptionQ15(option){
     document.getElementById("q15o4").disabled = false
   }
 }
-function escribirUso(inputObject) {
-  if(inputObject.id == "q15o4" && inputObject.checked == true){
-    Swal.fire({
-      title: "Los compradores en su mayoría",
-      html: '<input id="swal-input1" class="swal2-input" placeholder="Escribe el uso del espacio"></input>',
-      preConfirm: () => {
-        uso = document.getElementById("swal-input1").value;
-        if(uso == ""){
-          escribirUso(inputObject)
-        }
-        else if(uso != ""){
-          if(inputObject.id == "q15o4"){
-            // document.getElementById("insertUse").innerHTML = "";
-            document.getElementById("q15o4").value = uso;
-            document.getElementById(
-              "insertUse"
-            ).innerHTML = `<h6 id="h6Uso">${uso}</h6>`;
-            inputObject.value = uso
-          }
-        }
-      },
-    });
-  }
-  else if(inputObject.id !== "q15o4"){
-    document.getElementById("insertUse").innerHTML = ""
-  }
-}
+// function escribirUso(inputObject) {
+//   if(inputObject.id == "q15o4" && inputObject.checked == true){
+//     Swal.fire({
+//       title: "Los compradores en su mayoría",
+//       html: '<input id="swal-input1" class="swal2-input" placeholder="Escribe el uso del espacio"></input>',
+//       preConfirm: () => {
+//         uso = document.getElementById("swal-input1").value;
+//         if(uso == ""){
+//           escribirUso(inputObject)
+//         }
+//         else if(uso != ""){
+//           if(inputObject.id == "q15o4"){
+//             // document.getElementById("insertUse").innerHTML = "";
+//             document.getElementById("q15o4").value = uso;
+//             document.getElementById(
+//               "insertUse"
+//             ).innerHTML = `<h6 id="h6Uso">${uso}</h6>`;
+//             inputObject.value = uso
+//           }
+//         }
+//       },
+//     });
+//   }
+//   else if(inputObject.id !== "q15o4"){
+//     document.getElementById("insertUse").innerHTML = ""
+//   }
+// }
 // function getValuesQ15(){
 //   q15o1 = document.getElementById("q15o1")
 //   q15o2 = document.getElementById("q15o2")
@@ -712,7 +712,6 @@ function escribirUso(inputObject) {
 //   q17 = q17o1.value
 //   console.log("Q17: ", q17)
 // }
-
 
 function getValues(){
   prePersonalInformation = Array.from(document.getElementsByName("personalInformation"))
@@ -822,19 +821,26 @@ function getValues(){
       responses.push(preQ14[i].value)
     }
   }
+  // preQ15 = Array.from(document.getElementsByName("q15"))
+  // for(i = 0; i <= preQ15.length - 1; i++){
+  //   if(preQ15[i].type == "radio"){
+  //     if(preQ15[i].checked == true){
+  //       responses.push(preQ15[i].value)
+  //     }
+  //   }
+  //   else if(preQ15[i].type == "checkbox"){
+  //     if(preQ15[i].checked == true){
+  //       responses.push(preQ15[i].value)
+  //     }
+  //   }
+  // }
   preQ15 = Array.from(document.getElementsByName("q15"))
   for(i = 0; i <= preQ15.length - 1; i++){
-    if(preQ15[i].type == "radio"){
-      if(preQ15[i].checked == true){
-        responses.push(preQ15[i].value)
-      }
-    }
-    else if(preQ15[i].type == "checkbox"){
-      if(preQ15[i].checked == true){
-        responses.push(preQ15[i].value)
-      }
+    if(preQ15[i].checked == true || preQ15[i].type == "text"){
+      q15.push(preQ15[i].value)
     }
   }
+  responses.push(q15)
   preQ16 = Array.from(document.getElementsByName("q16"))
   for(i = 0; i <= preQ16.length - 1; i++){
     if(preQ16[i].checked == true){
@@ -860,6 +866,7 @@ function validateInformation(array) {
       confirmButtonColor: "#3085d6"
     })
     q11 = []
+    q15 = []
     responses = []
   }
   else if(array[1] == ""){
@@ -869,6 +876,7 @@ function validateInformation(array) {
       confirmButtonColor: "#3085d6"
     })
     q11 = []
+    q15 = []
     responses = []
   }
   else if(array.length == 21){

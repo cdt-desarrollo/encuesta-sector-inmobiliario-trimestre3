@@ -512,25 +512,23 @@
             </tr>
             <tr>
               <th>Compran para vivir</th>
-              <td><input type="radio" name="q15" value="compranparavivir" id="q15o1" onclick="escribirUso(this)"></td>
+              <td><input type="checkbox" name="q15" value="compranparavivir" id="q15o1"></td>
             </tr>
             <tr>
               <th>Compran para rentar</th>
-              <td><input type="radio" name="q15" value="compranpararentar" id="q15o2" onclick="escribirUso(this)"></td>
+              <td><input type="checkbox" name="q15" value="compranpararentar" id="q15o2"></td>
             </tr>
             <tr>
               <th>Compran como second home</th>
-              <td><input type="radio" name="q15" value="comprancomosecondhome" id="q15o3" onclick="escribirUso(this)"></td>
+              <td><input type="checkbox" name="q15" value="comprancomosecondhome" id="q15o3"></td>
             </tr>
             <tr>
               <th>Otros</th>
-              <td><input type="radio" name="q15" id="q15o4" onclick="escribirUso(this)">
-                <div id="insertUse"></div>
-              </td>
+              <td><input type="text" name="q15" id="q15o4"></td>
             </tr>
             <tr>
               <th>No tuve ventas</th>
-              <td><input type="checkbox" name="q15" value="notuveventas" id="q15o5" onclick="disableOptionQ15(this)"></td>
+              <td><input type="checkbox" name="q15" value="notuveventas" id="q15o5" onchange="disableOptionsQ15(this)"></td>
             </tr>
           </tbody>
         </table>
